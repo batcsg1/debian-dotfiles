@@ -40,14 +40,16 @@ window#waybar {
 
 /* distro pill: cycles through the spectrum */
 #custom-distro {
-    padding: 2px 8px;
+    background-color: rgba(32, 2, 12, 0.85);
+    border-bottom: 2px solid #ff1744;
     border-radius: 8px;
-    font-weight: bold;
-    color: #000000;
+    padding: 2px 8px;
     margin: 4px 2px;
-    background-color: #ff1744;
-    animation: rgb-cycle 8s linear infinite;
+    font-size: 12px;
+    font-weight: bold;
+    animation: rgb-text 6s linear infinite;
 }
+
 
 #clock,
 #custom-uptime,
@@ -131,38 +133,42 @@ window#waybar {
 
 /* workspaces: each dot its own hue, active one cycles RGB */
 #workspaces button {
-    background-color: rgba(255, 255, 255, 0.12);
-    color: transparent;
-    border-radius: 50%;
-    min-width: 12px;
-    min-height: 8px;
-    padding: 0;
-    margin: 0 4px;
-    font-size: 0;
+    background-color: rgba(10, 10, 18, 0.80);
+    color: rgba(230, 230, 240, 0.5);
+    border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 2px 8px;
+    margin: 4px 2px;
+    min-width: 0;
+    font-size: 10px;
+    font-weight: bold;
     transition: all 0.2s ease;
 }
 
-#workspaces button:nth-child(7n+1) { background-color: rgba(255, 23, 68, 0.35); }
-#workspaces button:nth-child(7n+2) { background-color: rgba(255, 109, 0, 0.35); }
-#workspaces button:nth-child(7n+3) { background-color: rgba(255, 214, 0, 0.35); }
-#workspaces button:nth-child(7n+4) { background-color: rgba(0, 230, 118, 0.35); }
-#workspaces button:nth-child(7n+5) { background-color: rgba(0, 229, 255, 0.35); }
-#workspaces button:nth-child(7n+6) { background-color: rgba(41, 121, 255, 0.35); }
-#workspaces button:nth-child(7n+7) { background-color: rgba(213, 0, 249, 0.35); }
+/* each workspace gets its own hue on text + underline */
+#workspaces button:nth-child(7n+1) { color: #ff1744; border-bottom-color: #ff1744; background-color: rgba(38, 3, 10, 0.85); }
+#workspaces button:nth-child(7n+2) { color: #ff6d00; border-bottom-color: #ff6d00; background-color: rgba(38, 16, 0, 0.85); }
+#workspaces button:nth-child(7n+3) { color: #ffd600; border-bottom-color: #ffd600; background-color: rgba(38, 32, 0, 0.85); }
+#workspaces button:nth-child(7n+4) { color: #00e676; border-bottom-color: #00e676; background-color: rgba(0, 35, 18, 0.85); }
+#workspaces button:nth-child(7n+5) { color: #00e5ff; border-bottom-color: #00e5ff; background-color: rgba(0, 34, 38, 0.85); }
+#workspaces button:nth-child(7n+6) { color: #2979ff; border-bottom-color: #2979ff; background-color: rgba(6, 18, 38, 0.85); }
+#workspaces button:nth-child(7n+7) { color: #d500f9; border-bottom-color: #d500f9; background-color: rgba(32, 0, 37, 0.85); }
 
 #workspaces button.empty {
-    background-color: rgba(255, 255, 255, 0.10);
+    color: rgba(255, 255, 255, 0.3);
+    border-bottom-color: transparent;
 }
 
+/* active: same style as the clock (pastel text + cycling neon underline) */
 #workspaces button.active {
-    min-width: 18px;
-    min-height: 8px;
-    border-radius: 6px;
-    background-color: #ff1744;
-    animation: rgb-cycle 4s linear infinite;
+    background-color: rgba(10, 10, 18, 0.85);
+    animation: rgb-text 6s linear infinite;
 }
 
 #workspaces button:hover {
-    background-color: #ff00aa;
-    box-shadow: 0 0 6px #ff00aa;
+    background-color: rgba(38, 0, 26, 0.85);
+    color: #ff00aa;
+    border-bottom-color: #ff00aa;
 }
