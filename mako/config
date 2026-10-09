@@ -1,0 +1,21 @@
+# ~/.config/mako/config
+font=DepartureMono Nerd Font Mono 10
+background-color=#0d0a1acc
+text-color=#e6e6ff
+border-color=#ff00ff
+border-size=2
+border-radius=8
+padding=10
+margin=10
+width=350
+default-timeout=5000
+
+[urgency=low]
+border-color=#00ffff
+
+[urgency=normal]
+border-color=#b14cff
+
+[urgency=critical]
+border-color=#ff0055
+default-timeout=0
