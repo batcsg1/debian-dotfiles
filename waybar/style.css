@@ -15,7 +15,7 @@
 
 * {
     font-family: "DepartureMono Nerd Font Mono", monospace;
-    font-size: 10px;
+    font-size: 8px;
     min-height: 0;
 }
 
@@ -45,7 +45,6 @@ window#waybar {
     border-radius: 8px;
     padding: 2px 8px;
     margin: 4px 2px;
-    font-size: 12px;
     font-weight: bold;
     animation: rgb-text 6s linear infinite;
 }
@@ -84,7 +83,6 @@ window#waybar {
 
 /* clock: rainbow-tinted background, text + underline cycle RGB */
 #clock {
-    font-size: 10px;
     margin: 4px 6px;
     background: linear-gradient(90deg,
         rgba(255, 23, 68, 0.18),
@@ -142,7 +140,6 @@ window#waybar {
     padding: 2px 8px;
     margin: 4px 2px;
     min-width: 0;
-    font-size: 10px;
     font-weight: bold;
     transition: all 0.2s ease;
 }
