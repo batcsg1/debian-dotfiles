@@ -14,8 +14,9 @@
 }
 
 * {
-    font-family: "DepartureMono Nerd Font Mono", monospace;
-    font-size: 8px;
+    font-family: "IoskeleyMonoNL NFM SC", monospace;
+    font-size: 10px;
+    font-weight: bolder;
     min-height: 0;
 }
 

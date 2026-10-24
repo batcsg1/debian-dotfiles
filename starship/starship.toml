@@ -52,7 +52,7 @@ format = '[](bg:#00e676 fg:#ffd600)[  $time ](bold bg:#00e676 fg:#000000)[](f
 # ── line 2: directory + git ──────────────────────────────────────
 
 [directory]
-format = '[\[ ](fg:#2979ff)[$path](bold fg:#00e5ff)[$read_only](fg:#ff1744)[ \]](fg:#2979ff)'
+format = '[\[ ](bold fg:#2979ff)[$path](bold fg:#00e5ff)[$read_only](fg:#ff1744)[ \]](fg:#2979ff)'
 read_only = ' 󰌾'
 truncation_length = 3
 truncate_to_repo = false
