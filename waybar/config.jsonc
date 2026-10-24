@@ -64,7 +64,7 @@
 
     "clock": {
         "interval": 1,
-        "format": "<span color='#ffd6de'>{0:%I:%M:%S %p}</span><span color='#6a6488'> | </span><span color='#fff8c7'>{0:%z}</span><span color='#6a6488'> | </span><span color='#ccffe3'>{0:%a * %b}</span><span color='#6a6488'> | </span><span color='#d6e4ff'>{0:%Y-%m-%d}</span>",
+        "format": "<span color='#ffd6de'>󰥔 {0:%I:%M:%S %p}</span><span color='#6a6488'> | </span><span color='#fff8c7'> {0:%z}</span><span color='#6a6488'> | </span><span color='#ccffe3'>󰸗 {0:%a * %b}</span><span color='#6a6488'> | </span><span color='#d6e4ff'> {0:%Y-%m-%d}</span>",
         "tooltip-format": "<tt>{calendar}</tt>"
     },
 
