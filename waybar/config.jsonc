@@ -58,7 +58,7 @@
     },
 
     "hyprland/workspaces": {
-        "format": "{id}",
+        "format": "󰍹 {id}",
         "on-click": "activate"
     },
 
