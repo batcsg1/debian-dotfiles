@@ -44,7 +44,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("sleep 1 && hyprpaper")
 	hl.exec_cmd("sleep 2 && hyprflow restore")
-	hl.exec_cmd("openrgb -p rog")
+	hl.exec_cmd("openrgb -p rog-mech")
 end)
 
 -------------------------------
