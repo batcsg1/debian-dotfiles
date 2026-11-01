@@ -26,6 +26,10 @@ for dir in btop fastfetch hypr kitty mako nvim waybar wofi; do
 done
 link "$repo/starship/starship.toml" "$config/starship.toml"
 
+# VS Code loads unpacked extensions straight from ~/.vscode/extensions.
+mkdir -p "$HOME/.vscode/extensions"
+link "$repo/vscode/rog-mech-theme" "$HOME/.vscode/extensions/batcsg1.rog-mech-theme-0.1.0"
+
 # OpenRGB rewrites its own folder, so the profile is copied rather than linked.
 # Regenerate it with openrgb/rog-mech.sh.
 mkdir -p "$config/OpenRGB"

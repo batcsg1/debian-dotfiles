@@ -39,6 +39,7 @@ The palette is repeated in each tool's native format:
 - `hypr/hyprland.lua` (`colors` table), `hypr/hyprlock.conf` (variables)
 - `fastfetch/config.jsonc`, `mako/config`
 - `nvim/lua/plugins/colorscheme.lua` (LazyVim + tokyonight, `rog` table)
+- `vscode/rog-mech-theme/` (local extension, linked into `~/.vscode/extensions`; select "ROG Mech")
 - `openrgb/rog-mech.sh` (sets motherboard RGB and saves `openrgb/rog-mech.orp`, loaded at Hyprland startup)
 
 ## Install
