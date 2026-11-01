@@ -38,6 +38,7 @@ The palette is repeated in each tool's native format:
 - `btop/themes/rog-mech.theme`
 - `hypr/hyprland.lua` (`colors` table), `hypr/hyprlock.conf` (variables)
 - `fastfetch/config.jsonc`, `mako/config`
+- `nvim/lua/plugins/colorscheme.lua` (LazyVim + tokyonight, `rog` table)
 
 ## Install
 
