@@ -25,3 +25,11 @@ for dir in btop fastfetch hypr kitty mako nvim waybar wofi; do
   link "$repo/$dir" "$config/$dir"
 done
 link "$repo/starship/starship.toml" "$config/starship.toml"
+
+# OpenRGB rewrites its own folder, so the profile is copied rather than linked.
+# Regenerate it with openrgb/rog-mech.sh.
+mkdir -p "$config/OpenRGB"
+if [ ! -e "$config/OpenRGB/rog-mech.orp" ]; then
+  cp "$repo/openrgb/rog-mech.orp" "$config/OpenRGB/"
+  echo "copy    $config/OpenRGB/rog-mech.orp"
+fi
