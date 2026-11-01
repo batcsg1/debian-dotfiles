@@ -1,20 +1,31 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
-# ROG RGB — red → orange → yellow → green → cyan → blue → purple
-# Palette matches kitty.conf (ROG RGB)
+# ROG Mech — red head, gunmetal body (palette in README.md)
 
 add_newline = true
+palette = 'rog_mech'
 
 format = """
-[┌](bold fg:#ff1744)$os$shell$username$hostname$time
-[└](bold fg:#2979ff)$directory$git_branch$git_status
+[┌](bold fg:red)$os$shell$username$hostname$time
+[└](bold fg:steel)$directory$git_branch$git_status
 $character"""
+
+[palettes.rog_mech]
+crust = '#06090d'
+surface0 = '#161d26'
+surface1 = '#222b36'
+surface2 = '#343a45'
+steel = '#8794a6'
+chrome = '#d6dde6'
+red = '#ff2233'
+red_bright = '#ff5566'
+volt = '#b8d4ff'
 
 # ── line 1: os / shell / user / host / time ──────────────────────
 
 [os]
 disabled = false
-format = '[ $symbol \($type\) ](bold bg:#ff1744 fg:#000000)'
+format = '[ $symbol \($type\) ](bold bg:red fg:crust)'
 
 [os.symbols]
 Debian = "󰣚"
@@ -32,27 +43,27 @@ zsh_indicator = 'zsh'
 fish_indicator = 'fish'
 powershell_indicator = 'pwsh'
 unknown_indicator = 'sh'
-format = '[](bg:#ff6d00 fg:#ff1744)[  $indicator ](bold bg:#ff6d00 fg:#000000)'
+format = '[](bg:surface2 fg:red)[  $indicator ](bold bg:surface2 fg:chrome)'
 
 [username]
 show_always = true
-style_user = 'bold bg:#ffd600 fg:#000000'
-style_root = 'bold bg:#ffd600 fg:#d50000'
-format = '[](bg:#ffd600 fg:#ff6d00)[  $user/]($style)'
+style_user = 'bold bg:surface1 fg:chrome'
+style_root = 'bold bg:surface1 fg:red'
+format = '[](bg:surface1 fg:surface2)[  $user/]($style)'
 
 [hostname]
 ssh_only = false
-format = '[$hostname ](bold bg:#ffd600 fg:#000000)'
+format = '[$hostname ](bold bg:surface1 fg:chrome)'
 
 [time]
 disabled = false
 time_format = '%H:%M'
-format = '[](bg:#00e676 fg:#ffd600)[  $time ](bold bg:#00e676 fg:#000000)[](fg:#00e676)'
+format = '[](bg:surface0 fg:surface1)[  $time ](bold bg:surface0 fg:steel)[](fg:surface0)'
 
 # ── line 2: directory + git ──────────────────────────────────────
 
 [directory]
-format = '[\[ ](bold fg:#2979ff)[$path](bold fg:#00e5ff)[$read_only](fg:#ff1744)[ \]](fg:#2979ff)'
+format = '[\[ ](bold fg:steel)[$path](bold fg:chrome)[$read_only](fg:red)[ \]](fg:steel)'
 read_only = ' 󰌾'
 truncation_length = 3
 truncate_to_repo = false
@@ -61,14 +72,14 @@ home_symbol = '~'
 
 [git_branch]
 symbol = ' '
-format = ' [$symbol$branch](bold fg:#d500f9)'
+format = ' [$symbol$branch](bold fg:volt)'
 
 [git_status]
-format = '[ $all_status$ahead_behind](fg:#ff00aa)'
+format = '[ $all_status$ahead_behind](fg:red_bright)'
 
 # ── line 3: prompt char ──────────────────────────────────────────
 
 [character]
-success_symbol = '[❯](bold fg:#ff1744)[❯](bold fg:#00e676)[❯](bold fg:#2979ff)'
-error_symbol = '[❯❯❯](bold fg:#ff1744)'
-vimcmd_symbol = '[❮](bold fg:#d500f9)'
+success_symbol = '[❯](bold fg:surface2)[❯](bold fg:steel)[❯](bold fg:red)'
+error_symbol = '[❯❯❯](bold fg:red)'
+vimcmd_symbol = '[❮](bold fg:volt)'

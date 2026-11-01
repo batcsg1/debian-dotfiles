@@ -1,21 +1,23 @@
-# ~/.config/mako/config
+# ROG Mech — gunmetal panel, red edge (see README.md)
 font=IoskeleyMonoNL NFM SC 10
-background-color=#0d0a1acc
-text-color=#e6e6ff
-border-color=#ff00ff
+background-color=#0b1015e6
+text-color=#d6dde6
+border-color=#ff2233
+progress-color=over #3a0d15
 border-size=2
-border-radius=8
+border-radius=0
 padding=10
 margin=10
 width=350
 default-timeout=5000
 
 [urgency=low]
-border-color=#00ffff
+border-color=#555c68
 
 [urgency=normal]
-border-color=#b14cff
+border-color=#ff2233
 
 [urgency=critical]
-border-color=#ff0055
+border-color=#b8d4ff
+background-color=#24090ee6
 default-timeout=0

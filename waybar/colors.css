@@ -1,0 +1,24 @@
+/* ROG Mech palette — sourced from hypr/wallpapers/rog_mech.jpg
+   Shared by waybar/style.css and the wofi stylesheets (keep the copies in sync) */
+
+@define-color crust     #06090d;
+@define-color base      #0b1015;
+@define-color mantle    #10161d;
+@define-color surface0  #161d26;
+@define-color surface1  #222b36;
+@define-color surface2  #343a45;
+@define-color overlay   #555c68;
+@define-color steel     #8794a6;
+@define-color subtext   #a9b6c6;
+@define-color text      #d6dde6;
+@define-color chrome    #eef2f6;
+
+@define-color red       #ff2233;
+@define-color red_hi    #ff5566;
+@define-color red_mid   #c41a28;
+@define-color red_deep  #6b0a12;
+@define-color red_bg    #24090e;
+
+@define-color volt      #b8d4ff;
+@define-color volt_dim  #6f93c4;
+@define-color amber     #e8a24a;

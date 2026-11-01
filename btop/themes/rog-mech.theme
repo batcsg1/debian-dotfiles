@@ -1,0 +1,59 @@
+# ROG Mech — gunmetal + ROG red, electric-blue accents (see README.md)
+theme[main_bg]="#0b1015"
+theme[main_fg]="#d6dde6"
+
+theme[title]="#eef2f6"
+theme[hi_fg]="#ff2233"
+theme[selected_bg]="#3a0d15"
+theme[selected_fg]="#eef2f6"
+
+theme[inactive_fg]="#555c68"
+theme[graph_text]="#a9b6c6"
+theme[meter_bg]="#161d26"
+theme[proc_misc]="#b8d4ff"
+
+# boxes: red for compute, steel for everything else
+theme[cpu_box]="#ff2233"
+theme[mem_box]="#555c68"
+theme[net_box]="#555c68"
+theme[proc_box]="#ff2233"
+theme[div_line]="#222b36"
+
+# temps: cool electric -> chrome -> hot red
+theme[temp_start]="#6f93c4"
+theme[temp_mid]="#d6dde6"
+theme[temp_end]="#ff2233"
+
+# load: dark steel -> deep red -> glowing red
+theme[cpu_start]="#555c68"
+theme[cpu_mid]="#c41a28"
+theme[cpu_end]="#ff2233"
+
+theme[free_start]="#222b36"
+theme[free_mid]="#555c68"
+theme[free_end]="#a9b6c6"
+
+theme[cached_start]="#1f3047"
+theme[cached_mid]="#6f93c4"
+theme[cached_end]="#b8d4ff"
+
+theme[available_start]="#222b36"
+theme[available_mid]="#8794a6"
+theme[available_end]="#d6dde6"
+
+theme[used_start]="#6b0a12"
+theme[used_mid]="#c41a28"
+theme[used_end]="#ff2233"
+
+# network: download = electric, upload = red
+theme[download_start]="#1f3047"
+theme[download_mid]="#6f93c4"
+theme[download_end]="#b8d4ff"
+
+theme[upload_start]="#6b0a12"
+theme[upload_mid]="#c41a28"
+theme[upload_end]="#ff5566"
+
+theme[process_start]="#555c68"
+theme[process_mid]="#c41a28"
+theme[process_end]="#ff2233"

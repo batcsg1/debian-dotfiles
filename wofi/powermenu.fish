@@ -6,11 +6,11 @@ set selected (string join \n $entries | wofi --dmenu --conf ~/.config/wofi/power
 
 switch "$selected"
     case "󰐥 Shutdown"
-        shutdown now
+        systemctl poweroff
     case " Reboot"
-        reboot
+        systemctl reboot
     case " Suspend"
-        suspend
+        systemctl suspend
     case "󰩈 Exit Hyprland"
         hyprctl dispatch exit
 end

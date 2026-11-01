@@ -1,15 +1,10 @@
-/* ROG RGB — modern glass launcher
-   red #ff1744  orange #ff6d00  yellow #ffd600  green #00e676
-   cyan #00e5ff  blue #2979ff  purple #d500f9  pink #ff00aa */
+/* ROG Mech — launcher: gunmetal panel framed in ROG red */
+@import "colors.css";
 
-@keyframes rgb-glow {
-    0%   { border-color: #ff1744; box-shadow: 0 0 8px rgba(255, 23, 68, 0.45); }
-    17%  { border-color: #ffd600; box-shadow: 0 0 8px rgba(255, 214, 0, 0.45); }
-    33%  { border-color: #00e676; box-shadow: 0 0 8px rgba(0, 230, 118, 0.45); }
-    50%  { border-color: #00e5ff; box-shadow: 0 0 8px rgba(0, 229, 255, 0.45); }
-    67%  { border-color: #2979ff; box-shadow: 0 0 8px rgba(41, 121, 255, 0.45); }
-    83%  { border-color: #d500f9; box-shadow: 0 0 8px rgba(213, 0, 249, 0.45); }
-    100% { border-color: #ff1744; box-shadow: 0 0 8px rgba(255, 23, 68, 0.45); }
+@keyframes red-glow {
+    0%   { border-color: @red_mid; box-shadow: 0 0 4px alpha(@red, 0.25); }
+    50%  { border-color: @red;     box-shadow: 0 0 10px alpha(@red, 0.55); }
+    100% { border-color: @red_mid; box-shadow: 0 0 4px alpha(@red, 0.25); }
 }
 
 * {
@@ -17,42 +12,41 @@
     font-size: 14px;
 }
 
-/* the window itself is the rainbow frame (2px shows around #outer-box) */
+/* the window itself is the red frame (2px shows around #outer-box) */
 #window {
-    background: linear-gradient(135deg,
-        #ff1744, #ff6d00, #ffd600, #00e676, #00e5ff, #2979ff, #d500f9, #ff00aa);
-    border-radius: 14px;
+    background: linear-gradient(135deg, @red, @red_deep 40%, @surface2 70%, @red);
+    border-radius: 0;
     border: none;
-    color: #e6e6f0;
+    color: @text;
 }
 
-/* dark glass panel inside the frame */
 #outer-box {
     margin: 2px;
     padding: 10px;
-    border-radius: 12px;
-    background-color: rgba(8, 8, 14, 0.94);
+    border-radius: 0;
+    background-color: alpha(@base, 0.95);
     border: none;
 }
 
 #input {
     margin: 4px 4px 10px 4px;
     padding: 10px 14px;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background-color: rgba(255, 255, 255, 0.04);
-    color: #ccfbff;
-    caret-color: #ff00aa;
+    border-radius: 0;
+    border: 1px solid @surface1;
+    border-bottom: 2px solid @surface2;
+    background-color: @surface0;
+    color: @chrome;
+    caret-color: @red;
     box-shadow: none;
 }
 
 #input:focus {
-    border-color: rgba(0, 229, 255, 0.6);
-    box-shadow: 0 0 8px rgba(0, 229, 255, 0.35);
+    border-bottom-color: @red;
+    box-shadow: none;
 }
 
 #input image {
-    color: #00e5ff;
+    color: @red;
 }
 
 #scroll {
@@ -67,36 +61,33 @@
 #entry {
     margin: 2px 4px;
     padding: 8px 12px;
-    border-radius: 10px;
+    border-radius: 0;
     border: 1px solid transparent;
     background-color: transparent;
     transition: all 0.15s ease;
 }
 
 #entry:hover {
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: alpha(@surface1, 0.6);
 }
 
-/* selected: subtle rainbow tint + border/glow that cycles RGB */
 #entry:selected {
-    background: linear-gradient(90deg,
-        rgba(255, 23, 68, 0.14),
-        rgba(0, 229, 255, 0.10),
-        rgba(213, 0, 249, 0.14));
-    border: 1px solid #ff1744;
-    animation: rgb-glow 6s linear infinite;
+    background: linear-gradient(90deg, alpha(@red, 0.22), alpha(@red_deep, 0.10) 60%, transparent);
+    border: 1px solid @red_mid;
+    border-left: 3px solid @red;
+    animation: red-glow 3s ease-in-out infinite;
     outline: none;
 }
 
 #text {
     margin: 0 6px;
-    color: #a8a8c0;
+    color: @subtext;
 }
 
-#text:selected {
-    color: #ffffff;
+#text:selected,
+#inner-box flowboxchild:selected #text {
+    color: @chrome;
     font-weight: bold;
-    text-shadow: 0 0 6px rgba(0, 229, 255, 0.6);
 }
 
 #img {
