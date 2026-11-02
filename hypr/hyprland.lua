@@ -200,7 +200,7 @@ hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(managementMenu))
-hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region"))
 
 -- Session
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lock))
@@ -208,8 +208,10 @@ hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("hyprflow save"))
 hl.bind(mainMod .. " + X", hl.dsp.exit())
 
 -- Power: plain = immediate (as shown on the lock screen), SHIFT = confirm first
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("systemctl poweroff"))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("systemctl reboot"))
+hl.bind(mainMod .. " + ALT + S", hl.dsp.exec_cmd("systemctl poweroff"))
+hl.bind(mainMod .. " + ALT + R", hl.dsp.exec_cmd("systemctl reboot"))
+
+-- Poweroff and reboot menus
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd(power .. " poweroff"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(power .. " reboot"))
 
