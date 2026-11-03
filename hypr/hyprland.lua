@@ -43,7 +43,7 @@ local power = "~/.config/hypr/scripts/power.sh"
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
 	hl.exec_cmd("sleep 1 && exec hyprpaper")
-	hl.exec_cmd("sleep 2 && exec hyprflow restore")
+	--hl.exec_cmd("sleep 2 && exec hyprflow restore")
 	hl.exec_cmd("openrgb -p rog-mech")
 end)
 
