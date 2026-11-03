@@ -1,0 +1,19 @@
+# ROG Mech
+mode clock
+view digital
+set hour-24 true
+set seconds true
+date "%a %d %b %Y"
+
+style background clear
+style active-bg #ff2233
+style active-fg #ff2233
+style inactive-bg #161d26
+style inactive-fg #161d26
+style colon-bg #d6dde6
+style colon-fg #d6dde6
+style date #555c68
+style text #d6dde6
+style prompt #ff2233
+style success #d6dde6
+style error #6b0a12
