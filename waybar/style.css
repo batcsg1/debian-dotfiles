@@ -38,7 +38,6 @@ tooltip label {
 #custom-kernel,
 #custom-cava,
 #workspaces button,
-#clock,
 #custom-uptime,
 #custom-netspeed,
 #memory,
@@ -70,14 +69,28 @@ tooltip label {
     color: @red;
 }
 
-#clock {
+/* clock + weather read as one pill: the group carries the pill styling */
+#time {
+    margin: 4px 6px;
+    background-color: alpha(@surface1, 0.9);
+    border-bottom: 2px solid @surface2;
+    animation: red-pulse 4s ease-in-out infinite;
+}
+
+#clock,
+#custom-weather {
     font-family: "IoskeleyMonoNL NFM SC Heavy", monospace;
     font-weight: 900;
     text-shadow: 1px 0 0 alpha(@text, 0.5);
-    margin: 4px 6px;
     color: @text;
-    background-color: alpha(@surface1, 0.9);
-    animation: red-pulse 4s ease-in-out infinite;
+}
+
+#clock {
+    padding: 2px 0 2px 12px;
+}
+
+#custom-weather {
+    padding: 2px 12px 2px 0;
 }
 
 #custom-netspeed {

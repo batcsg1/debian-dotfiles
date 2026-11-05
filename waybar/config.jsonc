@@ -7,7 +7,7 @@
     "spacing": 4,
 
     "modules-left": ["custom/distro", "custom/kernel", "hyprland/workspaces", "custom/cava"],
-    "modules-center": ["clock"],
+    "modules-center": ["group/time"],
     "modules-right": [
         "temperature", "cpu", "memory", "disk",
         "pulseaudio", "bluetooth", "network", "custom/netspeed",
@@ -32,8 +32,13 @@
     },
 
     "custom/cava": {
-        "exec": "~/.config/waybar/scripts/cava.sh",
+        "exec": "exec ~/.config/waybar/scripts/cava.sh",
         "tooltip": false
+    },
+
+    "group/time": {
+        "orientation": "horizontal",
+        "modules": ["clock", "custom/weather"]
     },
 
     "clock": {
@@ -47,6 +52,12 @@
                 "today": "<span color='#ff2233'><b><u>{}</u></b></span>"
             }
         }
+    },
+
+    "custom/weather": {
+        "exec": "exec ~/.config/waybar/scripts/weather.sh",
+        "return-type": "json",
+        "format": "<span color='#555c68'> | </span><span color='#8794a6'>󰔏</span> {}"
     },
 
     "temperature": {
