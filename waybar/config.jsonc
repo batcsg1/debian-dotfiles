@@ -6,7 +6,7 @@
     "height": 30,
     "spacing": 4,
 
-    "modules-left": ["custom/distro", "hyprland/workspaces"],
+    "modules-left": ["custom/distro", "custom/kernel", "hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": [
         "temperature", "cpu", "memory", "disk",
@@ -16,6 +16,13 @@
 
     "custom/distro": {
         "format": " XIII",
+        "tooltip": false
+    },
+
+    "custom/kernel": {
+        "exec": "uname -r",
+        "interval": "once",
+        "format": "<span color='#ff2233'></span> {}",
         "tooltip": false
     },
 
