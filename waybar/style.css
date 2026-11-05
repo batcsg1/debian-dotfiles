@@ -36,6 +36,7 @@ tooltip label {
 
 #custom-distro,
 #custom-kernel,
+#custom-cava,
 #workspaces button,
 #clock,
 #custom-uptime,
@@ -63,6 +64,10 @@ tooltip label {
     color: @red;
     border-bottom-color: @red;
     padding: 2px 8px;
+}
+
+#custom-cava {
+    color: @red;
 }
 
 #clock {

@@ -6,7 +6,7 @@
     "height": 30,
     "spacing": 4,
 
-    "modules-left": ["custom/distro", "custom/kernel", "hyprland/workspaces"],
+    "modules-left": ["custom/distro", "custom/kernel", "hyprland/workspaces", "custom/cava"],
     "modules-center": ["clock"],
     "modules-right": [
         "temperature", "cpu", "memory", "disk",
@@ -29,6 +29,11 @@
     "hyprland/workspaces": {
         "format": "󰍹 {id}",
         "on-click": "activate"
+    },
+
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "tooltip": false
     },
 
     "clock": {
