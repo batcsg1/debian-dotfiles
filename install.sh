@@ -21,7 +21,7 @@ link() {
   echo "link    $dst -> $src"
 }
 
-for dir in btop fastfetch hypr kitty mako nvim waybar wofi; do
+for dir in btop fastfetch hypr kitty mako nvim tty-clock waybar wofi; do
   link "$repo/$dir" "$config/$dir"
 done
 link "$repo/starship/starship.toml" "$config/starship.toml"

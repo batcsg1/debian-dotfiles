@@ -41,6 +41,7 @@ The palette is repeated in each tool's native format:
 - `nvim/lua/plugins/colorscheme.lua` (LazyVim + tokyonight, `rog` table)
 - `vscode/rog-mech-theme/` (local extension, linked into `~/.vscode/extensions`; select "ROG Mech")
 - `openrgb/rog-mech.sh` (sets motherboard RGB and saves `openrgb/rog-mech.orp`, loaded at Hyprland startup)
+- `tty-clock/rog-mech.sh` (wrapper with the clock's flags; tty-clock has no config file and inherits kitty's ANSI colours)
 
 ## Install
 
