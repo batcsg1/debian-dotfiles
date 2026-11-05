@@ -71,6 +71,9 @@ tooltip label {
 }
 
 #clock {
+    font-family: "IoskeleyMonoNL NFM SC Heavy", monospace;
+    font-weight: 900;
+    text-shadow: 1px 0 0 alpha(@text, 0.5);
     margin: 4px 6px;
     color: @text;
     background-color: alpha(@surface1, 0.9);
