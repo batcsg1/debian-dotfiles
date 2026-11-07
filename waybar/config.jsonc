@@ -6,7 +6,7 @@
     "height": 30,
     "spacing": 4,
 
-    "modules-left": ["group/distro", "custom/kernel", "hyprland/workspaces", "custom/cava"],
+    "modules-left": ["hyprland/workspaces", "group/distro", "custom/kernel", "custom/cava"],
     "modules-center": ["group/time"],
     "modules-right": [
         "temperature", "cpu", "memory", "disk",
