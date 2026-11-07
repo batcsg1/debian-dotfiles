@@ -6,7 +6,7 @@
     "height": 30,
     "spacing": 4,
 
-    "modules-left": ["custom/distro", "custom/kernel", "hyprland/workspaces", "custom/cava"],
+    "modules-left": ["group/distro", "custom/kernel", "hyprland/workspaces", "custom/cava"],
     "modules-center": ["group/time"],
     "modules-right": [
         "temperature", "cpu", "memory", "disk",
@@ -14,8 +14,19 @@
         "custom/uptime", "battery"
     ],
 
+    "group/distro": {
+        "orientation": "horizontal",
+        "modules": ["image#rog", "custom/distro"]
+    },
+
+    "image#rog": {
+        "exec": "echo ~/.config/waybar/rog.svg",
+        "size": 20,
+        "tooltip": false
+    },
+
     "custom/distro": {
-        "format": " XIII",
+        "format": "<span color='#555c68'>| </span> XIII",
         "tooltip": false
     },
 
