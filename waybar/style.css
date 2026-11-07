@@ -70,7 +70,11 @@ tooltip label {
 
 #custom-distro {
     color: @red;
-    padding: 2px 8px 2px 6px;
+    padding: 2px 6px;
+}
+
+#image.trixie {
+    padding: 2px 8px 2px 0;
 }
 
 #custom-cava {

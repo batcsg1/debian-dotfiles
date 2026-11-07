@@ -16,12 +16,18 @@
 
     "group/distro": {
         "orientation": "horizontal",
-        "modules": ["image#rog", "custom/distro"]
+        "modules": ["image#rog", "custom/distro", "image#trixie"]
     },
 
     "image#rog": {
         "exec": "echo ~/.config/waybar/rog.svg",
         "size": 20,
+        "tooltip": false
+    },
+
+    "image#trixie": {
+        "exec": "echo ~/.config/waybar/trixie.png",
+        "size": 18,
         "tooltip": false
     },
 
