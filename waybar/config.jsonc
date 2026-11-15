@@ -10,7 +10,7 @@
     "modules-center": ["group/time"],
     "modules-right": [
         "temperature", "cpu", "memory", "disk",
-        "pulseaudio", "bluetooth", "network", "custom/netspeed",
+        "wireplumber", "bluetooth", "network", "custom/netspeed",
         "custom/uptime", "battery"
     ],
 
@@ -80,26 +80,31 @@
     "temperature": {
         "format": "<span color='#ff2233'></span>  {temperatureC}°C",
         "format-critical": "  {temperatureC}°C",
+        "warning-threshold": 50,
         "critical-threshold": 80,
         "tooltip": true
     },
 
     "cpu": {
+        "states": { "low": 0, "medium": 40, "high": 75 },
         "format": "<span color='#ff2233'></span>  {usage}%",
         "tooltip": true
     },
 
     "memory": {
+        "states": { "low": 0, "medium": 50, "high": 80 },
         "format": "<span color='#ff2233'></span>  {percentage}%",
         "tooltip": true
     },
 
     "disk": {
+        "states": { "low": 0, "medium": 60, "high": 85 },
         "format": "<span color='#ff2233'>󰋊</span> {percentage_used}%",
         "path": "/"
     },
 
-    "pulseaudio": {
+    "wireplumber": {
+        "states": { "low": 0, "medium": 40, "high": 75 },
         "format": "<span color='#ff2233'>󰕾</span> {volume}%",
         "format-muted": "󰝟 ",
         "on-click": "pavucontrol"

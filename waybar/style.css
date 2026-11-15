@@ -42,7 +42,7 @@ tooltip label {
 #memory,
 #temperature,
 #disk,
-#pulseaudio,
+#wireplumber,
 #bluetooth,
 #network,
 #cpu,
@@ -74,7 +74,7 @@ tooltip label {
 }
 
 #image.trixie {
-    padding: 2px 8px 2px 0;
+    padding: 0 8px 0 0;
 }
 
 #custom-cava {
@@ -112,6 +112,31 @@ tooltip label {
 
 /* ── states ────────────────────────────────────────────────────── */
 
+/* load levels, cold to hot, in fastfetch's colours: volt keys, chrome title, red keys.
+   temperature has no states: it uses warning (50°C) and the critical fill below (80°C) */
+#temperature,
+#cpu.low,
+#memory.low,
+#disk.low,
+#wireplumber.low {
+    border-bottom-color: @volt;
+}
+
+#temperature.warning,
+#cpu.medium,
+#memory.medium,
+#disk.medium,
+#wireplumber.medium {
+    border-bottom-color: @chrome;
+}
+
+#cpu.high,
+#memory.high,
+#disk.high,
+#wireplumber.high {
+    border-bottom-color: @red;
+}
+
 #temperature.critical,
 #battery.critical:not(.charging) {
     color: @crust;
@@ -124,7 +149,7 @@ tooltip label {
     border-bottom-color: @amber;
 }
 
-#pulseaudio.muted,
+#wireplumber.muted,
 #bluetooth.off,
 #bluetooth.disabled,
 #network.disconnected {
