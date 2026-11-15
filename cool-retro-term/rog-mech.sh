@@ -5,12 +5,14 @@
 # rog-mech.json before each launch. Only --profile works; -p is ignored.
 dir=$(dirname "$(readlink -f "$0")")
 db=${XDG_DATA_HOME:-$HOME/.local/share}/cool-retro-term/cool-retro-term/QML/OfflineStorage/Databases/27e743fe85b8912a46804fed99e8a9ab.sqlite
+# Text size isn't part of a profile; 0.4 (40%) matches kitty's font_size 7 line height.
+font_scaling=0.4
 
 if [ -f "$db" ]; then
-  python3 -I - "$dir/rog-mech.json" "$db" <<'PY'
+  python3 -I - "$dir/rog-mech.json" "$db" "$font_scaling" <<'PY'
 import json, sqlite3, sys
 
-src, db = sys.argv[1:]
+src, db, font_scaling = sys.argv[1:]
 profile = json.load(open(src))
 name = profile.pop("name")
 profile.pop("version", None)
@@ -20,6 +22,12 @@ row = con.execute("SELECT value FROM settings WHERE setting = '_CUSTOM_PROFILES'
 profiles = [p for p in json.loads(row[0] if row else "[]") if p.get("text") != name]
 profiles.append({"text": name, "obj_string": json.dumps(profile), "builtin": False})
 con.execute("INSERT OR REPLACE INTO settings VALUES ('_CUSTOM_PROFILES', ?)", (json.dumps(profiles),))
+
+row = con.execute("SELECT value FROM settings WHERE setting = '_CURRENT_SETTINGS'").fetchone()
+if row:
+    settings = json.loads(row[0])
+    settings["fontScaling"] = float(font_scaling)
+    con.execute("UPDATE settings SET value = ? WHERE setting = '_CURRENT_SETTINGS'", (json.dumps(settings),))
 con.commit()
 PY
 fi
