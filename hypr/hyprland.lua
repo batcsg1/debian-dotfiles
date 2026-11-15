@@ -29,6 +29,7 @@ hl.monitor({ output = "DP-1", mode = "1920x1080@60", position = "3840x0", scale 
 ---------------------
 
 local terminal = "kitty"
+local retroTerm = "~/.config/cool-retro-term/rog-mech.sh" -- opens in the ROG Mech profile
 local fileManager = "kitty -e yazi"
 local menu = "wofi --show drun"
 local browser = "brave-origin-nightly"
@@ -196,6 +197,7 @@ local mainMod = "SUPER"
 
 -- Apps
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + ALT + T", hl.dsp.exec_cmd(retroTerm))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(menu))
