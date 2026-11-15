@@ -24,4 +24,7 @@ con.commit()
 PY
 fi
 
+# cool-retro-term can't parse fish's kitty keyboard protocol request (ESC[=5u)
+# and prints "5u" at each prompt, so fish runs without it here.
+[ $# -eq 0 ] && set -- -e fish --features no-keyboard-protocols
 exec cool-retro-term --profile "ROG Mech" "$@"
