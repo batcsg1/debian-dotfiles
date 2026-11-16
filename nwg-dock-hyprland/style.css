@@ -49,6 +49,17 @@ button:hover {
     border-bottom: 2px solid @red;
 }
 
+/* the ROG launcher button (first in the dock, -lp start) matches the distro pill;
+   it has no CSS name, so it's picked out by position */
+box:first-child > button {
+    background-color: alpha(@red_bg, 0.9);
+    border-bottom: 2px solid @red;
+}
+
+box:first-child > button:hover {
+    background-color: alpha(@red_deep, 0.6);
+}
+
 button:focus {
     box-shadow: none;
 }
