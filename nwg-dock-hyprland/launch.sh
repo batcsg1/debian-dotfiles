@@ -6,5 +6,5 @@ dir=$(dirname "$(readlink -f "$0")")
 pkill -x nwg-dock-hyprla # process names are cut to 15 characters
 
 for output in $(hyprctl monitors -j | jq -r '.[].name'); do
-  nwg-dock-hyprland -m -o "$output" -p bottom -x -i 32 -c "wofi --show drun" -ico "$dir/rog.svg" "$@" &
+  nwg-dock-hyprland -m -o "$output" -p bottom -x -i 32 -c "$HOME/.config/wofi/drun.sh" -ico "$dir/rog.svg" -lp start "$@" &
 done

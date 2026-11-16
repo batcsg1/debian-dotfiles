@@ -31,7 +31,7 @@ hl.monitor({ output = "DP-1", mode = "1920x1080@60", position = "3840x0", scale 
 local terminal = "kitty"
 local retroTerm = "~/.config/cool-retro-term/rog-mech.sh" -- opens in the ROG Mech profile
 local fileManager = "kitty -e yazi"
-local menu = "wofi --show drun"
+local menu = "~/.config/wofi/drun.sh"
 local browser = "brave-origin-nightly"
 local lock = "hyprlock"
 local managementMenu = "~/.config/wofi/powermenu.fish"
