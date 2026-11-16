@@ -7,8 +7,10 @@
     font-weight: bold;
 }
 
+/* the panel fades out at both ends, like the red line along its top */
 window {
-    background: alpha(@crust, 0.8);
+    background: linear-gradient(90deg,
+        transparent, alpha(@crust, 0.8) 90px, alpha(@crust, 0.8) calc(100% - 90px), transparent);
     border-radius: 0;
     border-style: none;
     border-top: 2px solid transparent;
@@ -16,8 +18,9 @@ window {
         transparent, @red_deep 20%, @red 50%, @red_deep 80%, transparent) 1;
 }
 
+/* wide side padding keeps the icons on the solid part, clear of the fade */
 #box {
-    padding: 6px 8px;
+    padding: 6px 90px;
 }
 
 button, image {
@@ -31,7 +34,7 @@ button {
     background-color: alpha(@surface0, 0.85);
     border-radius: 0;
     border-bottom: 2px solid @surface2;
-    padding: 4px;
+    padding: 0;
     margin: 0 3px;
 }
 
@@ -48,4 +51,16 @@ button:hover {
 
 button:focus {
     box-shadow: none;
+}
+
+/* Mac-style magnify: icons are rendered at 40px (-i 40 in launch.sh) and shown
+   at 80% (32px), so the hovered one can grow to full size without blurring or
+   being clipped by its button */
+button image {
+    -gtk-icon-transform: scale(0.8);
+    transition: -gtk-icon-transform 180ms ease-out;
+}
+
+button:hover image {
+    -gtk-icon-transform: scale(1);
 }
