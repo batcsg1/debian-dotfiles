@@ -1,0 +1,51 @@
+/* ROG Mech — gunmetal dock with ROG red underglow, matching the Waybar pills */
+@import "colors.css";
+
+* {
+    font-family: "IoskeleyMonoNL NFM SC", monospace;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+window {
+    background: alpha(@crust, 0.8);
+    border-radius: 0;
+    border-style: none;
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg,
+        transparent, @red_deep 20%, @red 50%, @red_deep 80%, transparent) 1;
+}
+
+#box {
+    padding: 6px 8px;
+}
+
+button, image {
+    background: none;
+    border-style: none;
+    box-shadow: none;
+    color: @subtext;
+}
+
+button {
+    background-color: alpha(@surface0, 0.85);
+    border-radius: 0;
+    border-bottom: 2px solid @surface2;
+    padding: 4px;
+    margin: 0 3px;
+}
+
+button:hover {
+    background-color: alpha(@surface1, 0.95);
+    border-bottom-color: @red_mid;
+}
+
+/* the focused window's app */
+#active {
+    background-color: alpha(@red_bg, 0.9);
+    border-bottom: 2px solid @red;
+}
+
+button:focus {
+    box-shadow: none;
+}

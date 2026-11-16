@@ -33,7 +33,7 @@ angular mech.
 The palette is repeated in each tool's native format:
 
 - `kitty/theme.conf`
-- `waybar/colors.css` and `wofi/colors.css` (GTK `@define-color`, keep in sync)
+- `waybar/colors.css`, `wofi/colors.css` and `nwg-dock-hyprland/colors.css` (GTK `@define-color`, keep in sync)
 - `starship/starship.toml` (`[palettes.rog_mech]`)
 - `btop/themes/rog-mech.theme`
 - `hypr/hyprland.lua` (`colors` table), `hypr/hyprlock.conf` (variables)
@@ -43,6 +43,7 @@ The palette is repeated in each tool's native format:
 - `openrgb/rog-mech.sh` (sets motherboard RGB and saves `openrgb/rog-mech.orp`, loaded at Hyprland startup)
 - `tty-clock/rog-mech.sh` (wrapper with the clock's flags; tty-clock has no config file and inherits kitty's ANSI colours)
 - `cool-retro-term/rog-mech.json` (profile; `rog-mech.sh` stores it in cool-retro-term's database and opens it, bound to SUPER + ALT + T. Flat screen on purpose: curvature draws a fixed grey bezel)
+- `nwg-dock-hyprland/style.css` (dock; `launch.sh` starts one at the bottom of every monitor at Hyprland startup. Not packaged for Debian 13, build it from [source](https://github.com/nwg-piotr/nwg-dock-hyprland))
 
 ## Install
 
