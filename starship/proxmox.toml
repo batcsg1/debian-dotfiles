@@ -27,7 +27,7 @@ volt = '#ffc27a'
 
 [os]
 disabled = false
-format = '[ $symbol \(Proxmox\) ](bold bg:red fg:crust)'
+format = '[ $symbol\(Proxmox\) ](bold bg:red fg:crust)'
 
 [os.symbols]
 Debian = " "  # Proxmox VE reports Debian; shown as the Proxmox logo
