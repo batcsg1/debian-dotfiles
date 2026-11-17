@@ -59,6 +59,7 @@
     },
 
     "clock": {
+        "on-click": "~/.config/waybar/scripts/calendar-popup.py",
         "interval": 1,
         "format": "<span color='#ff2233'>󰥔</span> {0:%I:%M:%S %p}<span color='#555c68'> | </span><span color='#8794a6'></span> {0:%z}<span color='#555c68'> | </span><span color='#8794a6'>󰸗</span> {0:%a * %b}<span color='#555c68'> | </span><span color='#8794a6'></span> {0:%Y-%m-%d}",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -72,6 +73,7 @@
     },
 
     "custom/weather": {
+        "on-click": "~/.config/waybar/scripts/calendar-popup.py",
         "exec": "exec ~/.config/waybar/scripts/weather.sh",
         "return-type": "json",
         "format": "<span color='#555c68'> | </span><span color='#8794a6'>󰔏</span> {}"
