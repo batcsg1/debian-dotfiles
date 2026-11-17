@@ -28,7 +28,7 @@ disabled = false
 format = '[ $symbol \($type\) ](bold bg:red fg:crust)'
 
 [os.symbols]
-Debian = "󰣚"
+Debian = ""
 Ubuntu = ""
 Arch = ""
 Fedora = ""
