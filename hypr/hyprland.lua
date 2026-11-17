@@ -286,6 +286,14 @@ hl.layer_rule({
 	animation = "slide",
 })
 
+-- both sit in the "top" layer; a higher order keeps the dock in front, so wofi
+-- rises from behind it
+hl.layer_rule({
+	name = "dock-above-wofi",
+	match = { namespace = "^nwg-dock$" },
+	order = 1,
+})
+
 hl.window_rule({
 	match = { class = ".*" },
 	min_size = { 300, 200 },

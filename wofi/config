@@ -1,9 +1,9 @@
 term=kitty
 show_all=true
 gtk_dark=false
-# sits just above the dock (54px) like a start menu; negative yoffset moves it up
+# ends ~10px behind the dock like a start menu; negative yoffset moves it up
 location=bottom
-yoffset=-62
+yoffset=-15
 insensitive=false
 allow_markup=true
 allow_images=true
