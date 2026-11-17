@@ -35,6 +35,7 @@ The palette is repeated in each tool's native format:
 - `kitty/theme.conf`
 - `waybar/colors.css`, `wofi/colors.css` and `nwg-dock-hyprland/colors.css` (GTK `@define-color`, keep in sync)
 - `starship/starship.toml` (`[palettes.rog_mech]`)
+- `starship/proxmox.toml` (same prompt in Proxmox orange for the Proxmox host; copy to `/root/.config/starship.toml` there)
 - `btop/themes/rog-mech.theme`
 - `hypr/hyprland.lua` (`colors` table), `hypr/hyprlock.conf` (variables)
 - `fastfetch/config.jsonc`, `mako/config`
