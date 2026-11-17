@@ -32,6 +32,8 @@ local terminal = "kitty"
 local retroTerm = "~/.config/cool-retro-term/rog-mech.sh" -- opens in the ROG Mech profile
 local fileManager = "kitty -e yazi"
 -- floats over the other windows (see the tty-clock window rule); ESC closes it, DELETE already closes any window
+-- fullscreen screensaver; pipes quits on any key, which closes the window
+local pipes = "kitty --class pipes --start-as=fullscreen -o font_size=12 ~/.config/pipes/rog-mech.sh"
 local clock = "kitty --class tty-clock -o 'map escape close_window' ~/.config/tty-clock/rog-mech.sh"
 local menu = "~/.config/wofi/drun.sh"
 local browser = "brave-origin-nightly"
@@ -203,6 +205,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + ALT + T", hl.dsp.exec_cmd(retroTerm))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(clock))
+hl.bind(mainMod .. " + ALT + P", hl.dsp.exec_cmd(pipes))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(managementMenu))
@@ -275,6 +278,13 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 --------------------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
+-- wofi opens just above the dock, so it slides up from it like a start menu
+hl.layer_rule({
+	name = "slide-wofi",
+	match = { namespace = "^wofi$" },
+	animation = "slide",
+})
+
 hl.window_rule({
 	match = { class = ".*" },
 	min_size = { 300, 200 },

@@ -60,6 +60,7 @@ The palette is repeated in each tool's native format:
 | T / F / B / M  | terminal / yazi / browser / launcher |
 | ALT + T        | cool-retro-term               |
 | C              | tty-clock (floating, ESC or DELETE closes) |
+| ALT + P        | pipes (fullscreen, any key closes) |
 | SHIFT + M      | power menu                    |
 | ALT + S        | region screenshot             |
 | L              | lock                          |
