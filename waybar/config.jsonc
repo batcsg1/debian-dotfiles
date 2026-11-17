@@ -9,7 +9,7 @@
     "modules-left": ["hyprland/workspaces", "group/distro", "custom/kernel", "custom/cava"],
     "modules-center": ["group/time"],
     "modules-right": [
-        "temperature", "cpu", "memory", "disk",
+        "temperature", "cpu", "memory", "custom/vram", "disk",
         "wireplumber", "bluetooth", "network", "custom/netspeed",
         "custom/uptime", "battery"
     ],
@@ -94,6 +94,15 @@
     "memory": {
         "states": { "low": 0, "medium": 50, "high": 80 },
         "format": "<span color='#ff2233'></span>  {percentage}%",
+        "tooltip": true
+    },
+
+    "custom/vram": {
+        "exec": "~/.config/waybar/scripts/vram.sh",
+        "return-type": "json",
+        "interval": 5,
+        "states": { "low": 0, "medium": 50, "high": 80 },
+        "format": "<span color='#ff2233'>󰢮</span> {}",
         "tooltip": true
     },
 

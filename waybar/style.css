@@ -40,6 +40,7 @@ tooltip label {
 #custom-uptime,
 #custom-netspeed,
 #memory,
+#custom-vram,
 #temperature,
 #disk,
 #wireplumber,
@@ -117,6 +118,7 @@ tooltip label {
 #temperature,
 #cpu.low,
 #memory.low,
+#custom-vram.low,
 #disk.low,
 #wireplumber.low {
     border-bottom-color: @volt;
@@ -125,6 +127,7 @@ tooltip label {
 #temperature.warning,
 #cpu.medium,
 #memory.medium,
+#custom-vram.medium,
 #disk.medium,
 #wireplumber.medium {
     border-bottom-color: @chrome;
@@ -132,6 +135,7 @@ tooltip label {
 
 #cpu.high,
 #memory.high,
+#custom-vram.high,
 #disk.high,
 #wireplumber.high {
     border-bottom-color: @red;
