@@ -7,8 +7,10 @@
     100% { border-bottom-color: @red_deep; box-shadow: 0 2px 4px alpha(@red, 0.15); }
 }
 
+/* Söhne (Klim's trial cut, hence "Test"); Ioskeley fills in the Nerd Font icons
+   and any characters the trial fonts leave out */
 * {
-    font-family: "IoskeleyMonoNL NFM SC", monospace;
+    font-family: "Test Söhne", "IoskeleyMonoNL NFM SC", monospace;
     font-size: 10px;
     font-weight: bold;
     min-height: 0;
@@ -90,9 +92,11 @@ tooltip label {
     animation: red-pulse 4s ease-in-out infinite;
 }
 
+/* Söhne's digits vary in width, so pills that change every second use Söhne Mono
+   to keep them from jiggling; 900 is the Extrafett weight */
 #clock,
 #custom-weather {
-    font-family: "IoskeleyMonoNL NFM SC Heavy", monospace;
+    font-family: "Test Söhne Mono", "IoskeleyMonoNL NFM SC", monospace;
     font-weight: 900;
     text-shadow: 1px 0 0 alpha(@text, 0.5);
     color: @text;
@@ -107,6 +111,7 @@ tooltip label {
 }
 
 #custom-netspeed {
+    font-family: "Test Söhne Mono", "IoskeleyMonoNL NFM SC", monospace;
     color: @volt;
     border-bottom-color: @volt_dim;
 }
