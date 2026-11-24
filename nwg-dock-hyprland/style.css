@@ -2,7 +2,7 @@
 @import "colors.css";
 
 * {
-    font-family: "Test Söhne", "IoskeleyMonoNL NFM SC", monospace;
+    font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 10px;
     font-weight: bold;
 }

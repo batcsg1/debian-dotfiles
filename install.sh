@@ -39,8 +39,8 @@ if [ ! -e "$config/OpenRGB/rog-mech.orp" ]; then
 fi
 
 # GTK's settings files are rewritten by KDE's settings tools, so they're copied
-# rather than linked (never over existing ones). The UI font is Söhne, which
-# isn't in this repo: its licence doesn't allow sharing it.
+# rather than linked (never over existing ones). The UI font is JetBrains Mono
+# (Debian: fonts-jetbrains-mono; the Nerd Font build for the icons).
 for f in gtk-3.0/settings.ini gtk-4.0/settings.ini; do
   if [ ! -e "$config/$f" ]; then
     mkdir -p "$config/$(dirname "$f")"
@@ -52,4 +52,4 @@ if [ ! -e "$HOME/.gtkrc-2.0" ]; then
   cp "$repo/gtk/gtkrc-2.0" "$HOME/.gtkrc-2.0"
   echo "copy    $HOME/.gtkrc-2.0"
 fi
-gsettings set org.gnome.desktop.interface font-name 'Test Söhne 10' 2>/dev/null || true
+gsettings set org.gnome.desktop.interface font-name 'JetBrainsMono Nerd Font 10' 2>/dev/null || true

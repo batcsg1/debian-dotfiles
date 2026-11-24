@@ -28,7 +28,7 @@ window {
     border-bottom: 2px solid @red;
 }
 * {
-    font-family: "Test Söhne", "IoskeleyMonoNL NFM SC", monospace;
+    font-family: "JetBrainsMono Nerd Font", monospace;
     font-size: 11px;
     font-weight: bold;
 }

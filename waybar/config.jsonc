@@ -3,7 +3,7 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 26,
     "spacing": 4,
 
     "modules-left": ["hyprland/workspaces", "group/distro", "custom/kernel", "custom/cava"],
@@ -21,13 +21,13 @@
 
     "image#rog": {
         "exec": "echo ~/.config/waybar/rog.svg",
-        "size": 20,
+        "size": 17,
         "tooltip": false
     },
 
     "image#trixie": {
         "exec": "echo ~/.config/waybar/trixie.png",
-        "size": 18,
+        "size": 15,
         "tooltip": false
     },
 

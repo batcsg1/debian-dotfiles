@@ -7,11 +7,9 @@
     100% { border-bottom-color: @red_deep; box-shadow: 0 2px 4px alpha(@red, 0.15); }
 }
 
-/* Söhne (Klim's trial cut, hence "Test"); Ioskeley fills in the Nerd Font icons
-   and any characters the trial fonts leave out */
 * {
-    font-family: "Test Söhne", "IoskeleyMonoNL NFM SC", monospace;
-    font-size: 10px;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 9px;
     font-weight: bold;
     min-height: 0;
 }
@@ -54,8 +52,8 @@ tooltip label {
     color: @subtext;
     border-radius: 0;
     border-bottom: 2px solid @surface2;
-    padding: 2px 12px;
-    margin: 4px 2px;
+    padding: 1px 10px;
+    margin: 3px 2px;
 }
 
 /* icons are tinted per pill via <span> in config.jsonc */
@@ -64,20 +62,20 @@ tooltip label {
 #distro {
     background-color: alpha(@red_bg, 0.9);
     border-bottom: 2px solid @red;
-    margin: 4px 2px;
+    margin: 3px 2px;
 }
 
 #image.rog {
-    padding: 2px 0 2px 8px;
+    padding: 1px 0 1px 7px;
 }
 
 #custom-distro {
     color: @red;
-    padding: 2px 6px;
+    padding: 1px 5px;
 }
 
 #image.trixie {
-    padding: 0 8px 0 0;
+    padding: 0 7px 0 0;
 }
 
 #custom-cava {
@@ -86,32 +84,28 @@ tooltip label {
 
 /* clock + weather read as one pill: the group carries the pill styling */
 #time {
-    margin: 4px 6px;
+    margin: 3px 6px;
     background-color: alpha(@surface1, 0.9);
     border-bottom: 2px solid @surface2;
     animation: red-pulse 4s ease-in-out infinite;
 }
 
-/* Söhne's digits vary in width, so pills that change every second use Söhne Mono
-   to keep them from jiggling; 900 is the Extrafett weight */
 #clock,
 #custom-weather {
-    font-family: "Test Söhne Mono", "IoskeleyMonoNL NFM SC", monospace;
-    font-weight: 900;
+    font-weight: 800;
     text-shadow: 1px 0 0 alpha(@text, 0.5);
     color: @text;
 }
 
 #clock {
-    padding: 2px 0 2px 12px;
+    padding: 1px 0 1px 10px;
 }
 
 #custom-weather {
-    padding: 2px 12px 2px 0;
+    padding: 1px 10px 1px 0;
 }
 
 #custom-netspeed {
-    font-family: "Test Söhne Mono", "IoskeleyMonoNL NFM SC", monospace;
     color: @volt;
     border-bottom-color: @volt_dim;
 }
@@ -175,7 +169,7 @@ tooltip label {
 }
 
 #workspaces button {
-    padding: 2px 8px;
+    padding: 1px 7px;
     min-width: 0;
     border-top: none;
     border-left: none;
