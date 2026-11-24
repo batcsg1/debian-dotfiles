@@ -40,6 +40,7 @@ The palette is repeated in each tool's native format:
 - `hypr/hyprland.lua` (`colors` table), `hypr/hyprlock.conf` (variables)
 - `fastfetch/config.jsonc`, `mako/config`
 - `nvim/lua/plugins/colorscheme.lua` (LazyVim + tokyonight, `rog` table)
+- `vscode/settings.json` (VS Code settings, JetBrains Mono, copied by `install.sh`; database connections are kept out)
 - `vscode/rog-mech-theme/` (local extension, linked into `~/.vscode/extensions`; select "ROG Mech")
 - `openrgb/rog-mech.sh` (sets motherboard RGB and saves `openrgb/rog-mech.orp`, loaded at Hyprland startup)
 - `tty-clock/rog-mech.sh` (wrapper with the clock's flags; tty-clock has no config file and inherits kitty's ANSI colours. SUPER + C opens it floating)

@@ -1,0 +1,29 @@
+{
+    "workbench.colorTheme": "ROG Mech",
+    "editor.fontFamily": "'JetBrainsMonoNL NFM', monospace",
+    "terminal.integrated.fontFamily": "'JetBrainsMonoNL NFM'",
+    "git.autofetch": true,
+    "claudeCode.preferredLocation": "panel",
+    "explorer.fileNesting.patterns": {
+        "*.ts": "${capture}.js",
+        "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+        "*.jsx": "${capture}.js",
+        "*.tsx": "${capture}.ts",
+        "tsconfig.json": "tsconfig.*.json",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "remote.SSH.serverArgs": [
+        "--max-old-space-size=512"
+    ],
+    "editor.codeLensFontFamily": "'JetBrainsMonoNL NFM', monospace",
+    "editor.inlayHints.fontFamily": "'JetBrainsMonoNL NFM', monospace",
+    "chat.editor.fontFamily": "'JetBrainsMonoNL NFM', monospace",
+    "chat.fontFamily": "'JetBrainsMonoNL NFM', monospace",
+    "terminal.integrated.stickyScroll.enabled": false
+}

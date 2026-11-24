@@ -26,6 +26,14 @@ for dir in btop cool-retro-term fastfetch hypr kitty mako nvim nwg-dock-hyprland
 done
 link "$repo/starship/starship.toml" "$config/starship.toml"
 
+# VS Code settings are copied, never over existing ones: the live file holds
+# machine-local entries (database connections) that stay out of this repo.
+mkdir -p "$config/Code/User"
+if [ ! -e "$config/Code/User/settings.json" ]; then
+  cp "$repo/vscode/settings.json" "$config/Code/User/settings.json"
+  echo "copy    $config/Code/User/settings.json"
+fi
+
 # VS Code loads unpacked extensions straight from ~/.vscode/extensions.
 mkdir -p "$HOME/.vscode/extensions"
 link "$repo/vscode/rog-mech-theme" "$HOME/.vscode/extensions/batcsg1.rog-mech-theme-0.1.0"
