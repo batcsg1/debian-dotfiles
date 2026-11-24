@@ -43,6 +43,7 @@ The palette is repeated in each tool's native format:
 - `vscode/rog-mech-theme/` (local extension, linked into `~/.vscode/extensions`; select "ROG Mech")
 - `openrgb/rog-mech.sh` (sets motherboard RGB and saves `openrgb/rog-mech.orp`, loaded at Hyprland startup)
 - `tty-clock/rog-mech.sh` (wrapper with the clock's flags; tty-clock has no config file and inherits kitty's ANSI colours. SUPER + C opens it floating)
+- `gtk/` (GTK 2/3/4 settings, copied by `install.sh`; UI font Söhne, hyprlock clock Söhne Breit. The fonts aren't in the repo: install Klim's files into `~/.local/share/fonts`)
 - `pipes/rog-mech.sh` (pipes.sh wrapper, Debian package `pipes-sh`; installed as `pipes`; ROG red, steel and volt pipes from kitty's ANSI colours)
 - `cool-retro-term/rog-mech.json` (profile; `rog-mech.sh` stores it in cool-retro-term's database and opens it, bound to SUPER + ALT + T. Flat screen on purpose: curvature draws a fixed grey bezel)
 - `nwg-dock-hyprland/style.css` (dock; `launch.sh` starts one at the bottom of every monitor at Hyprland startup. Not packaged for Debian 13, build it from [source](https://github.com/nwg-piotr/nwg-dock-hyprland))

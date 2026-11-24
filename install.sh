@@ -37,3 +37,19 @@ if [ ! -e "$config/OpenRGB/rog-mech.orp" ]; then
   cp "$repo/openrgb/rog-mech.orp" "$config/OpenRGB/"
   echo "copy    $config/OpenRGB/rog-mech.orp"
 fi
+
+# GTK's settings files are rewritten by KDE's settings tools, so they're copied
+# rather than linked (never over existing ones). The UI font is Söhne, which
+# isn't in this repo: its licence doesn't allow sharing it.
+for f in gtk-3.0/settings.ini gtk-4.0/settings.ini; do
+  if [ ! -e "$config/$f" ]; then
+    mkdir -p "$config/$(dirname "$f")"
+    cp "$repo/gtk/$f" "$config/$f"
+    echo "copy    $config/$f"
+  fi
+done
+if [ ! -e "$HOME/.gtkrc-2.0" ]; then
+  cp "$repo/gtk/gtkrc-2.0" "$HOME/.gtkrc-2.0"
+  echo "copy    $HOME/.gtkrc-2.0"
+fi
+gsettings set org.gnome.desktop.interface font-name 'Test Söhne 10' 2>/dev/null || true
