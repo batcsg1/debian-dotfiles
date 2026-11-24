@@ -2,11 +2,13 @@
 # Applies the ROG Mech palette to the motherboard's Aura RGB, then saves it
 # as the OpenRGB profile "rog-mech" so hyprland can load it with `openrgb -p rog-mech`.
 #   rog-mech.sh [static|accent|breathe|off]
-# Colours match waybar/colors.css: red #ff2233, red_deep #6b0a12, volt #b8d4ff.
+# Colours follow waybar/colors.css (red #ff2233, red_deep #6b0a12, volt #b8d4ff),
+# minus the green and blue in the reds: LEDs have no gamma, so the little blue in
+# #ff2233 that a screen hides turns the LEDs pink.
 set -euo pipefail
 
-red=FF2233
-red_deep=6B0A12
+red=FF0000
+red_deep=6B0000
 volt=B8D4FF
 dev=0 # ASUS ROG STRIX Z390-F GAMING Addressable (see `openrgb -l`)
 
