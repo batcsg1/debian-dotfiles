@@ -90,15 +90,36 @@ tooltip label {
     animation: red-pulse 4s ease-in-out infinite;
 }
 
-#clock,
+#custom-clock,
 #custom-weather {
     font-weight: 800;
     text-shadow: 1px 0 0 alpha(@text, 0.5);
     color: @text;
 }
 
-#clock {
-    padding: 1px 0 1px 10px;
+#custom-clock {
+    padding: 1px 0 1px 6px;
+}
+
+/* the 12h/24h switch at the start of the clock pill: a small key cap,
+   steel for 12h, red when 24h is on */
+#custom-clockformat {
+    font-size: 8px;
+    color: @steel;
+    background-color: @surface0;
+    border-bottom: 1px solid @surface2;
+    padding: 0 4px;
+    margin: 3px 0 3px 6px;
+}
+
+#custom-clockformat.h24 {
+    color: @red;
+    background-color: alpha(@red_bg, 0.9);
+    border-bottom-color: @red;
+}
+
+#custom-clockformat:hover {
+    border-bottom-color: @red_mid;
 }
 
 #custom-weather {

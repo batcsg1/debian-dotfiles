@@ -55,21 +55,20 @@
 
     "group/time": {
         "orientation": "horizontal",
-        "modules": ["clock", "custom/weather"]
+        "modules": ["custom/clockformat", "custom/clock", "custom/weather"]
     },
 
-    "clock": {
+    "custom/clockformat": {
+        "exec": "~/.config/waybar/scripts/clock-format.sh",
+        "on-click": "~/.config/waybar/scripts/clock-format.sh toggle",
+        "return-type": "json",
+        "tooltip": true
+    },
+    "custom/clock": {
+        "exec": "exec ~/.config/waybar/scripts/clock.py",
         "on-click": "~/.config/waybar/scripts/calendar-popup.py",
-        "interval": 1,
-        "format": "<span color='#ff2233'>󰥔</span> {0:%I:%M:%S %p}<span color='#555c68'> | </span><span color='#8794a6'></span> {0:%z}<span color='#555c68'> | </span><span color='#8794a6'>󰸗</span> {0:%a * %b}<span color='#555c68'> | </span><span color='#8794a6'></span> {0:%Y-%m-%d}",
-        "tooltip-format": "<tt>{calendar}</tt>",
-        "calendar": {
-            "format": {
-                "months": "<span color='#d6dde6'><b>{}</b></span>",
-                "weekdays": "<span color='#8794a6'>{}</span>",
-                "today": "<span color='#ff2233'><b><u>{}</u></b></span>"
-            }
-        }
+        "return-type": "json",
+        "tooltip": true
     },
 
     "custom/weather": {
