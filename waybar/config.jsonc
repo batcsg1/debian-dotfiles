@@ -9,7 +9,7 @@
     "modules-left": ["hyprland/workspaces", "group/distro", "custom/kernel", "custom/cava"],
     "modules-center": ["group/time"],
     "modules-right": [
-        "temperature", "cpu", "memory", "custom/vram", "disk",
+        "group/cpuload", "memory", "custom/vram", "disk",
         "wireplumber", "bluetooth", "network", "custom/netspeed",
         "custom/uptime", "battery", "custom/notifications"
     ],
@@ -80,9 +80,14 @@
         "format": "<span color='#555c68'> | </span><span color='#8794a6'>󰔏</span> {}"
     },
 
+    "group/cpuload": {
+        "orientation": "horizontal",
+        "modules": ["cpu", "temperature"]
+    },
+
     "temperature": {
-        "format": "<span color='#ff2233'></span>  {temperatureC}°C",
-        "format-critical": "  {temperatureC}°C",
+        "format": "<span color='#555c68'>| </span>{temperatureC}°C",
+        "format-critical": "| {temperatureC}°C",
         "warning-threshold": 50,
         "critical-threshold": 80,
         "tooltip": true
@@ -109,6 +114,7 @@
     },
 
     "disk": {
+        "on-click": "~/.config/waybar/scripts/disks.py",
         "states": { "low": 0, "medium": 60, "high": 85 },
         "format": "<span color='#ff2233'>󰋊</span> {percentage_used}%",
         "path": "/"

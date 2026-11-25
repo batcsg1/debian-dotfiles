@@ -59,6 +59,27 @@ tooltip label {
 
 /* icons are tinted per pill via <span> in config.jsonc */
 
+/* CPU usage + temperature read as one pill like VRAM: the group carries the
+   background, and each half keeps its own load line underneath */
+#cpuload {
+    background-color: alpha(@surface0, 0.85);
+    margin: 3px 2px;
+}
+
+#cpuload #cpu,
+#cpuload #temperature {
+    background-color: transparent;
+    margin: 0;
+}
+
+#cpuload #cpu {
+    padding: 1px 4px 1px 10px;
+}
+
+#cpuload #temperature {
+    padding: 1px 10px 1px 4px;
+}
+
 /* ROG logo + distro read as one pill: the group carries the pill styling */
 #distro {
     background-color: alpha(@red_bg, 0.9);
