@@ -47,6 +47,7 @@ local power = "~/.config/hypr/scripts/power.sh"
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("waybar")
+	hl.exec_cmd("~/.config/hypr/scripts/net-notify.sh") -- mako notification when the internet drops
 	hl.exec_cmd("/usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1") -- password prompts for pkexec (pacmangr-gui)
 	hl.exec_cmd("~/.config/nwg-dock-hyprland/launch.sh")
 	--hl.exec_cmd("exec hyprpaper")

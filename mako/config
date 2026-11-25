@@ -24,6 +24,16 @@ border-color=#b8d4ff
 background-color=#24090ee6
 default-timeout=0
 
+# internet dropped / restored (hypr/scripts/net-notify.sh): red frame on the ROG
+# background while it's down; the card stays until the connection returns
+[app-name=Network urgency=critical]
+border-color=#ff2233
+background-color=#24090ee6
+
 # toggled by right-clicking the Waybar bell
 [mode=do-not-disturb]
 invisible=1
+
+# ...but still say when the internet drops
+[mode=do-not-disturb app-name=Network urgency=critical]
+invisible=0
