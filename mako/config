@@ -10,6 +10,8 @@ padding=10
 margin=10
 width=350
 default-timeout=5000
+# the Waybar bell lists these; mako keeps 5 by default
+max-history=30
 
 [urgency=low]
 border-color=#555c68
@@ -21,3 +23,7 @@ border-color=#ff2233
 border-color=#b8d4ff
 background-color=#24090ee6
 default-timeout=0
+
+# toggled by right-clicking the Waybar bell
+[mode=do-not-disturb]
+invisible=1

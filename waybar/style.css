@@ -38,6 +38,7 @@ tooltip label {
 #custom-cava,
 #workspaces button,
 #custom-uptime,
+#custom-notifications,
 #custom-netspeed,
 #memory,
 #custom-vram,
@@ -221,4 +222,15 @@ tooltip label {
     color: @red_hi;
     background-color: alpha(@surface1, 0.95);
     border-bottom-color: @red_hi;
+}
+
+/* notification bell: red with a count when there's something unread, dimmed
+   with a crossed-out bell when Do Not Disturb is on */
+#custom-notifications.unread {
+    color: @red;
+    border-bottom-color: @red;
+}
+
+#custom-notifications.dnd {
+    color: @overlay;
 }
