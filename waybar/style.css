@@ -14,8 +14,13 @@
     min-height: 0;
 }
 
+/* bar-bg.png: a band of the "flowing red" dot-wave art, mirrored into a seamless
+   1920px strip and 50% opaque so the wallpaper shows through */
 window#waybar {
-    background: alpha(@crust, 0.55);
+    background-color: transparent;
+    background-image: url("bar-bg.png");
+    background-size: cover;
+    background-position: center;
     color: @text;
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(90deg,
