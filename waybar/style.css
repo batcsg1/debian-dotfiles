@@ -41,6 +41,7 @@ tooltip label {
 
 #custom-kernel,
 #custom-cava,
+#mpris,
 #workspaces button,
 #custom-uptime,
 #custom-notifications,
@@ -259,4 +260,14 @@ tooltip label {
 
 #custom-notifications.dnd {
     color: @overlay;
+}
+
+/* now playing: red line while playing, dimmed when paused */
+#mpris {
+    border-bottom-color: @red;
+}
+
+#mpris.paused {
+    color: @overlay;
+    border-bottom-color: @surface2;
 }

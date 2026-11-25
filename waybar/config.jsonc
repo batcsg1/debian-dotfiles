@@ -6,7 +6,7 @@
     "height": 26,
     "spacing": 4,
 
-    "modules-left": ["hyprland/workspaces", "group/distro", "custom/kernel", "custom/cava"],
+    "modules-left": ["hyprland/workspaces", "group/distro", "custom/kernel", "custom/cava", "mpris"],
     "modules-center": ["group/time"],
     "modules-right": [
         "group/cpuload", "memory", "custom/vram", "disk",
@@ -150,6 +150,17 @@
         "return-type": "json",
         "interval": 2,
         "tooltip": true
+    },
+
+    // what's playing in Brave (YouTube etc.) or any other MPRIS player; hidden
+    // when nothing is. Click: play/pause, right-click: next, middle: previous
+    "mpris": {
+        "format": "<span color='#ff2233'>󰝚</span> {dynamic}",
+        "format-paused": "<span color='#555c68'>󰏤</span> {dynamic}",
+        "dynamic-order": ["title", "artist"],
+        "dynamic-len": 40,
+        "dynamic-separator": " — ",
+        "tooltip-format": "{player}: {title} — {artist}"
     },
 
     "custom/notifications": {
