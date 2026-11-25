@@ -237,7 +237,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 -- close ALL windows on every workspace
 hl.bind(
 	mainMod .. " + SHIFT + Q",
-	hl.dsp.exec_cmd([[hyprctl clients -j | jq -r '.[].address' | xargs -I{} hyprctl dispatch closewindow address:{}]])
+	hl.dsp.exec_cmd([[hyprctl clients -j | jq -r '.[].address' | xargs -I{} hyprctl dispatch 'hl.dsp.window.close({ window = "address:{}" })']])
 )
 
 -- Move focus with mainMod + arrow keys
