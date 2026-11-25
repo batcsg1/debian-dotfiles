@@ -72,5 +72,6 @@ The palette is repeated in each tool's native format:
 | S / R          | shutdown / reboot (immediate) |
 | SHIFT + P / R  | shutdown / reboot (confirm)   |
 | V / P / J      | float / pseudo / toggle split |
+| D              | minimise / restore all windows (every workspace) |
 | DELETE         | close window                  |
 | SHIFT + Q      | close every window            |

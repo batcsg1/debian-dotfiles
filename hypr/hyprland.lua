@@ -230,6 +230,7 @@ hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(power .. " reboot"))
 -- Windows
 hl.bind("DELETE", hl.dsp.window.close())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("~/.config/hypr/scripts/minimize-all.sh")) -- minimise / restore every window
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
