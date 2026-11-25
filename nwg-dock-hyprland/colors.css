@@ -22,3 +22,7 @@
 @define-color volt      #b8d4ff;
 @define-color volt_dim  #6f93c4;
 @define-color amber     #e8a24a;
+
+/* load levels on the Waybar pills (low / medium; high is @red) */
+@define-color green     #7fc29b;
+@define-color yellow    #f5c542;

@@ -134,7 +134,7 @@ tooltip label {
 
 /* ── states ────────────────────────────────────────────────────── */
 
-/* load levels, cold to hot, in fastfetch's colours: volt keys, chrome title, red keys.
+/* load levels: green low, yellow medium, red high.
    temperature has no states: it uses warning (50°C) and the critical fill below (80°C) */
 #temperature,
 #cpu.low,
@@ -142,7 +142,7 @@ tooltip label {
 #custom-vram.low,
 #disk.low,
 #wireplumber.low {
-    border-bottom-color: @volt;
+    border-bottom-color: @green;
 }
 
 #temperature.warning,
@@ -151,7 +151,7 @@ tooltip label {
 #custom-vram.medium,
 #disk.medium,
 #wireplumber.medium {
-    border-bottom-color: @chrome;
+    border-bottom-color: @yellow;
 }
 
 #cpu.high,
